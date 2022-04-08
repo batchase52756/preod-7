@@ -3,57 +3,18 @@
     Dim m_shapes As New Collection
     Dim c As Color
     Dim w As Integer
-<<<<<<< HEAD
-    Dim type As String
-=======
 
 
->>>>>>> main
     Private Sub pictureBox1_MouseDown(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseDown
         m_Previous = e.Location
         pictureBox1_MouseMove(sender, e)
     End Sub
-<<<<<<< HEAD
-    Private Sub pictureBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseMove
-        If m_Previous IsNot Nothing Then
-            Dim d As Object
-
-            If Type = "Line" Then
-                d = New Line(PictureBox1.Image, m_Previous, e.Location)
-                d.Pen = New Pen(c, w)
-            End If
-            If type = "square1" Then
-                d = New square1(PictureBox1.Image, m_Previous, e.Location)
-                d.Pen = New Pen(c, w)
-                d.w = TrackBar2.Value
-                d.h = TrackBar3.Value
-            End If
-            If type = "poligon" Then
-                d = New POLIGON(PictureBox1.Image, m_Previous, e.Location)
-                d.Pen = New Pen(c, w)
-                d.w = TrackBar2.Value
-                d.h = TrackBar3.Value
-            End If
-            If type = "n-gon" Then
-                d = New n_gon(PictureBox1.Image, m_Previous, e.Location)
-                d.Pen = New Pen(c, w)
-                d.side = TrackBar4.Value
-                d.radius = TrackBar5.Value
-            End If
-            If type = "picture" Then
-                d = New PBox(PictureBox1.Image, m_Previous, e.Location)
-                d.picture = PictureBox2.Image
-            End If
-
-            m_shapes.Add(d)
-=======
 
     Private Sub pictureBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseMove
         If m_Previous IsNot Nothing Then
             Dim l As New Line(PictureBox1.Image, m_Previous, e.Location)
             l.Pen = New Pen(c, w)
             m_shapes.Add(l)
->>>>>>> main
             PictureBox1.Invalidate()
             m_Previous = e.Location
         End If
@@ -74,11 +35,7 @@
     End Sub
 
     Private Sub PictureBox1_Paint(sender As Object, e As PaintEventArgs) Handles PictureBox1.Paint
-<<<<<<< HEAD
-        For Each s As Object In m_shapes
-=======
         For Each s As Line In m_shapes
->>>>>>> main
             s.Draw()
         Next
     End Sub
@@ -98,13 +55,8 @@
         c = sender.backcolor
     End Sub
 
-<<<<<<< HEAD
-    Private Sub TrackBar1_Scroll(sender As Object, e As EventArgs)
-        w = TrackBar2.Value
-=======
     Private Sub TrackBar1_Scroll(sender As Object, e As EventArgs) Handles TrackBar1.Scroll
         w = TrackBar1.Value
->>>>>>> main
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
@@ -211,57 +163,4 @@
         SaveFileDialog1.ShowDialog()
         PictureBox1.Image.Save(SaveFileDialog1.FileName)
     End Sub
-<<<<<<< HEAD
-
-    Private Sub Button28_Click(sender As Object, e As MouseEventArgs) Handles Button28.Click
-        If m_Previous IsNot Nothing Then
-            Dim l As New Line(PictureBox1.Image, m_Previous, e.Location)
-            l.Pen = New Pen(c, w)
-            m_shapes.Add(l)
-            PictureBox1.Invalidate()
-            m_Previous = e.Location
-        End If
-    End Sub
-
-    Private Sub Button29_Click(sender As Object, e As MouseEventArgs) Handles Button29.Click
-        If m_Previous IsNot Nothing Then
-            Dim l As New Circle1(PictureBox1.Image, m_Previous, e.Location)
-            l.Pen = New Pen(c, w)
-            l.w = TrackBar2.Value
-            l.h = TrackBar3.Value
-            m_shapes.Add(l)
-            PictureBox1.Invalidate()
-            m_Previous = e.Location
-        End If
-    End Sub
-
-    Private Sub Button30_Click(sender As Object, e As MouseEventArgs) Handles Button30.Click
-        If m_Previous IsNot Nothing Then
-            Dim l As New square1(PictureBox1.Image, m_Previous, e.Location)
-            l.Pen = New Pen(c, w)
-            l.w = TrackBar2.Value
-            l.h = TrackBar3.Value
-            m_shapes.Add(l)
-            PictureBox1.Invalidate()
-            m_Previous = e.Location
-        End If
-    End Sub
-
-    Private Sub Button30_Click(sender As Object, e As EventArgs) Handles Button30.Click
-        type = "square1"
-    End Sub
-
-    Private Sub Button31_Click(sender As Object, e As EventArgs) Handles Button31.Click
-        type = "poligon"
-    End Sub
-
-    Private Sub Button32_Click(sender As Object, e As EventArgs) Handles Button32.Click
-        type = "n-gon"
-    End Sub
-
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        type = "picture"
-    End Sub
-=======
->>>>>>> main
 End Class

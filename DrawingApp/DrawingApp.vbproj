@@ -72,10 +72,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="Circle1.vb" />
-=======
->>>>>>> main
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -99,13 +96,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="n-gon.vb" />
     <Compile Include="PBox.vb" />
     <Compile Include="POLIGON.vb" />
     <Compile Include="square1.vb" />
-=======
->>>>>>> main
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -113,9 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -130,12 +124,6 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-<<<<<<< HEAD
-  <ItemGroup>
-    <None Include="Resources\images %283%29blue protogen.jpg" />
-  </ItemGroup>
-=======
->>>>>>> main
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
